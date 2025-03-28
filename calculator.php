@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HA Bill Management System</title>
     
-    <link rel="stylesheet" href="styles/styles.css"
+    <link rel="stylesheet" href="styles/styles.css">
 
 
     </head>
@@ -232,7 +232,8 @@ Downlaod PDF</button>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="Scripts/Scripts.js"></script>
+<script src="scripts/Scripts.js"></script>
+<script src="scripts/GeneratePDF.js"></script>
 
 </body>
 </html>

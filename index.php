@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HA Bill Management System</title>
     
-    <link rel="stylesheet" href="Styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 
 
     </head>
@@ -77,16 +77,7 @@
                 !! Not Saved !!&nbsp</text></td>
             <td colspan="3" style="text-align: right;">
                 <div style="display: flex; justify-content: flex-end; gap: 10px;">
-                <button id="Save" onclick="saveToFile(event);saveToLocalStorage()" style="
-                    background-color: #4CAF50;
-                    color: white;
-                    padding: 10px 20px;
-                    border: none;
-                    border-radius: 5px;
-                    font-size: 16px;
-                    cursor: pointer;
-                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-                    transition: background-color 0.3s ease;">
+                <button id="Save" onclick="saveToFile(event);saveToLocalStorage()" class="saveDetails">
                     Save Details
                 </button>
                 </div>
@@ -96,18 +87,7 @@
         <tr>
             <td></td><td></td><td></td><td></td>
                 <td width="20%">
-                    <button id="Reset" onclick="ResetButton()" type="Reset" style="
-                        background-color: #ec0a0a;
-                        color: white;
-                        padding: 10px 20px;
-                        border: none;
-                        border-radius: 5px;
-                        font-size: 16px;
-                        cursor: pointer;
-                        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-                        transition: background-color 0.3s ease;
-                        float: right;
-                        max-width: 320px;">
+                    <button id="Reset" onclick="ResetButton()" type="Reset" class="reset">
                         Reset
                     </button> 
                 </td>
@@ -118,7 +98,7 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="Scripts/Scripts.js"></script>
+<script src="scripts/Scripts.js"></script>
 
 </body>
 </html>
