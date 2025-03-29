@@ -1,3 +1,5 @@
+<?php include("inc/connection.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HA Bill Management System</title>
     
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 
 
     </head>
 
 <body>
 
-<?php include("include/header.php"); ?>
+<?php include("inc/header.php"); ?>
 
 <!--Personal Details-->
 <div id="PersonalDetails"  style="display: block; padding-right: 10px; padding-bottom: 5px; padding-left: 10px;">
@@ -98,7 +100,9 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="scripts/Scripts.js"></script>
+<script src="js/Scripts.js"></script>
 
 </body>
 </html>
+
+<?php mysqli_close($connection); ?> 
