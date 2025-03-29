@@ -19,7 +19,7 @@
 <!--Personal Details-->
 <div id="PersonalDetails"  style="display: block; padding-right: 10px; padding-bottom: 5px; padding-left: 10px;">
     <hr>
-        <form>
+        <form action="php/detailsToDB.php" method="POST">
             
             <table class="PersonalTable" height="690px" width="100%" style="border-collapse: collapse;" onchange="TableChnage()">
                 <script>
@@ -33,17 +33,17 @@
                                 <th width="22%">Rent</th>
                             </tr>
                             <tr>
-                                <td><input oninput="saveToLocalStorage()" type="text" id="Name${i}" style="width: 100%;"></td>
-                                <td><input oninput="saveToLocalStorage()" type="number" id="Rent${i}" style="width: 100%;"></td>
+                                <td><input oninput="saveToLocalStorage()" type="text" id="Name${i}" name="name${i}" style="width: 100%;"></td>
+                                <td><input oninput="saveToLocalStorage()" type="number" id="Rent${i}" name="rent${i}" style="width: 100%;"></td>
                             </tr>
                             <tr>
                                 <th width="18%">Last Unit Read</th>
                                 <th width="23%">Last Unit Read Month</th>
                             </tr>
                             <tr>
-                                <td><input oninput="saveToLocalStorage()" type="number" id="Unit${i}" style="width: 100%;"></td>
+                                <td><input oninput="saveToLocalStorage()" type="number" id="Unit${i}" name="units${i}" style="width: 100%;"></td>
                                 <td>
-                                    <select oninput="saveToLocalStorage()" id="Month${i}" style="width: 100%;">
+                                    <select oninput="saveToLocalStorage()" id="Month${i}" name="month${i}" style="width: 100%;">
                                         <option value="" disabled selected>Select Month</option>
                                         <option value="1">January</option>
                                         <option value="2">February</option>
@@ -79,7 +79,7 @@
                 !! Not Saved !!&nbsp</text></td>
             <td colspan="3" style="text-align: right;">
                 <div style="display: flex; justify-content: flex-end; gap: 10px;">
-                <button id="Save" onclick="saveToFile(event);saveToLocalStorage()" class="saveDetails">
+                <button type="submit" id="Save" onclick="saveToFile(event);saveToLocalStorage()" class="saveDetails">
                     Save Details
                 </button>
                 </div>
@@ -105,4 +105,4 @@
 </body>
 </html>
 
-<?php mysqli_close($connection); ?> 
+<?php mysqli_close($con); ?> 

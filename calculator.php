@@ -241,4 +241,4 @@ Downlaod PDF</button>
 </body>
 </html>
 
-<?php mysqli_close($connection); ?>
+<?php mysqli_close($con); ?>
